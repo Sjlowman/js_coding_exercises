@@ -12,7 +12,7 @@ export function capitalize(word) {
 export function generateInitials(firstName, lastName) {
 	if (firstName === undefined) throw new Error('firstName is required');
 	if (lastName === undefined) throw new Error('lastName is required');
-	// Add your code here!
+	return firstName.substring(0, 1).toUpperCase() + "." + lastName.substring(0, 1).toUpperCase();
 }
 
 export function addVAT(originalPrice, vatRate) {
