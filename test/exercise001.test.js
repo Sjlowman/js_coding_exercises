@@ -29,7 +29,7 @@ xdescribe("generateInitials", () => {
   });
 });
 
-xdescribe("addVAT", () => {
+describe("addVAT", () => {
   test("adds a VAT of 20% to a price of 100", () => {
     expect(addVAT(100, 20)).toBe(120);
   });
@@ -75,7 +75,7 @@ xdescribe("getMiddleCharacter", () => {
   });
 });
 
-describe("reverseWord", () => {
+xdescribe("reverseWord", () => {
   test("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });
