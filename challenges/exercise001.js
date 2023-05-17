@@ -31,7 +31,6 @@ export function getSalePrice(originalPrice, reduction) {
 
 export function getMiddleCharacter(str) {
 	if (str === undefined) throw new Error('str is required');
-	// Note to self. Considered rounding up the "string length div 2" calculation, but as thos is effectively done anyway, decided not to 
 	return (str.length % 2  == 0) ? str.charAt((str.length / 2) -1) + str.charAt(str.length / 2) : str.charAt((str.length / 2));
 }
 
@@ -42,7 +41,7 @@ export function reverseWord(word) {
 
 export function reverseAllWords(words) {
 	if (words === undefined) throw new Error('words is required');
-	// Add your code here!
+	return words.map(w => w.split("").reverse().join(""));
 }
 
 export function countLinuxUsers(users) {
