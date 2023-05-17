@@ -19,7 +19,6 @@ export function addVAT(originalPrice, vatRate) {
 	if (originalPrice === undefined)
 		throw new Error('originalPrice is requied');
 	if (vatRate === undefined) throw new Error('vatRate is required');
-	//let priceInclVATNotRounded = originalPrice + (originalPrice * vatRate / 100);
 	return Number((originalPrice + (originalPrice * vatRate / 100)).toFixed(2));
 }
 
@@ -27,8 +26,7 @@ export function getSalePrice(originalPrice, reduction) {
 	if (originalPrice === undefined)
 		throw new Error('originalPrice is required');
 	if (reduction === undefined) throw new Error('reduction is required');
-	let salePriceNotRounded = originalPrice - (originalPrice * reduction / 100);
-	return Number(salePriceNotRounded.toFixed(2));
+	return Number((originalPrice - (originalPrice * reduction / 100)).toFixed(2));
 }
 
 export function getMiddleCharacter(str) {
