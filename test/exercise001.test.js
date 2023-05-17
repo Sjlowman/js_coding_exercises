@@ -23,13 +23,13 @@ xdescribe("capitalize", () => {
   });
 });
 
-describe("generateInitials", () => {
+xdescribe("generateInitials", () => {
   test("returns the initials of a firstname and surname", () => {
     expect(generateInitials("Frederic", "Bonneville")).toBe("F.B");
   });
 });
 
-xdescribe("addVAT", () => {
+describe("addVAT", () => {
   test("adds a VAT of 20% to a price of 100", () => {
     expect(addVAT(100, 20)).toBe(120);
   });
