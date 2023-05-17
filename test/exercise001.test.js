@@ -65,7 +65,7 @@ xdescribe("getSalePrice", () => {
   });
 });
 
-describe("getMiddleCharacter", () => {
+xdescribe("getMiddleCharacter", () => {
   test("returns the middle character from a string of odd length", () => {
     expect(getMiddleCharacter("bears!!!!")).toBe("s");
   });
@@ -75,7 +75,7 @@ describe("getMiddleCharacter", () => {
   });
 });
 
-xdescribe("reverseWord", () => {
+describe("reverseWord", () => {
   test("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });
