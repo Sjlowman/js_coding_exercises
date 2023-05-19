@@ -31,7 +31,7 @@ xdescribe("findNamesBeginningWith", () => {
   });
 });
 
-describe("findVerbs", () => {
+xdescribe("findVerbs", () => {
   test("returns an array of words that are considered verbs (because they begin with 'to ')", () => {
     const words = [
       "to eat",
@@ -58,7 +58,7 @@ describe("findVerbs", () => {
   });
 });
 
-xdescribe("getIntegers", () => {
+describe("getIntegers", () => {
   test("returns an array containing only integers", () => {
     const nums = [1, 3.5, 2.1, 1, 4, 9];
     expect(getIntegers(nums)).toEqual([1, 1, 4, 9]);
