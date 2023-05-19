@@ -58,7 +58,7 @@ xdescribe("findVerbs", () => {
   });
 });
 
-describe("getIntegers", () => {
+xdescribe("getIntegers", () => {
   test("returns an array containing only integers", () => {
     const nums = [1, 3.5, 2.1, 1, 4, 9];
     expect(getIntegers(nums)).toEqual([1, 1, 4, 9]);
@@ -67,7 +67,7 @@ describe("getIntegers", () => {
   });
 });
 
-xdescribe("getCities", () => {
+describe("getCities", () => {
   test("returns an array of the cities of each user", () => {
     const users = [
       {
