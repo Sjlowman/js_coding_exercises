@@ -15,7 +15,8 @@ export function camelCaseWords(words) {
 
 export function getTotalSubjects(people) {
   if (people === undefined) throw new Error("people is required");
-  // Your code here!
+  const subjArray = Object.keys(people[1].subjects[0]);
+  return subjArray.length;
 }
 
 export function checkIngredients(menu, ingredient) {
@@ -27,5 +28,8 @@ export function checkIngredients(menu, ingredient) {
 export function duplicateNumbers(arr1, arr2) {
   if (arr1 === undefined) throw new Error("arr1 is required");
   if (arr2 === undefined) throw new Error("arr2 is required");
-  // Your code here!
+  const intersection = [
+    ...new Set(arr1.filter((element) => arr2.includes(element))),
+  ];
+  return intersection.sort((a, b) => a - b);
 }
