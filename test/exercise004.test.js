@@ -118,7 +118,7 @@ xdescribe("getSquareRoots", () => {
   });
 });
 
-describe("findSentencesContaining", () => {
+xdescribe("findSentencesContaining", () => {
   const sentencesAboutPackageJson = [
     "You should specify a license for your package so that people know how they are permitted to use it",
     "The main field is a module ID that is the primary entry point to your program",
@@ -154,7 +154,7 @@ describe("findSentencesContaining", () => {
   });
 });
 
-xdescribe("getLongestSides", () => {
+describe("getLongestSides", () => {
   test("returns the longest side of each set of triangle data", () => {
     const data = [
       [6, 7, 10],
