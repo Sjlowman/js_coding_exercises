@@ -5,7 +5,12 @@ export function getSquares(nums) {
 
 export function camelCaseWords(words) {
   if (words === undefined) throw new Error("words is required");
-  // Your code here!
+  const lowerCaseAll = words.map((w) => w.toLowerCase());
+  const [first, ...remaining] = lowerCaseAll;
+  const properCaseSection = remaining
+    .toString()
+    .replace(/\b\w/g, (x) => x.toUpperCase());
+  return (first + properCaseSection).replaceAll(",", "");
 }
 
 export function getTotalSubjects(people) {

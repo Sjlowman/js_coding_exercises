@@ -6,7 +6,7 @@ import {
   duplicateNumbers,
 } from "../challenges/exercise003";
 
-xdescribe("camelCaseWords", () => {
+describe("camelCaseWords", () => {
   test("camel cases a single word (i.e. no capital letter at beginning)", () => {
     expect(camelCaseWords(["my"])).toBe("my");
   });
@@ -25,7 +25,7 @@ xdescribe("camelCaseWords", () => {
   });
 });
 
-describe("getSquares", () => {
+xdescribe("getSquares", () => {
   test("returns an empty array if empty array passed", () => {
     expect(getSquares([])).toEqual([]);
   });
