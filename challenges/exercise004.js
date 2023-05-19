@@ -33,7 +33,7 @@ export function getCities(users) {
 
 export function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  return nums.map((n) => Number(Math.sqrt(n).toFixed(2)));
 }
 
 export function findSentencesContaining(sentences, str) {
