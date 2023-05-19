@@ -9,7 +9,7 @@ import {
   getLongestSides,
 } from "../challenges/exercise004";
 
-describe("findSmallNums", () => {
+xdescribe("findSmallNums", () => {
   test("returns an array of numbers smaller than 1", () => {
     expect(findSmallNums([8, 1, 1.3, 0.9, 0.4, -1])).toEqual([0.9, 0.4, -1]);
     expect(findSmallNums([-7, -243])).toEqual([-7, -243]);
@@ -18,7 +18,7 @@ describe("findSmallNums", () => {
   });
 });
 
-xdescribe("findNamesBeginningWith", () => {
+describe("findNamesBeginningWith", () => {
   test("returns an array of names beginning with the specified character", () => {
     const names = ["Sally", "Dave", "Susan", "Geoff", "Riley", "Sam"];
     expect(findNamesBeginningWith(names, "S")).toEqual([
