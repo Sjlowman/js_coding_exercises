@@ -6,7 +6,7 @@ import {
   duplicateNumbers,
 } from "../challenges/exercise003";
 
-xdescribe("camelCaseWords", () => {
+describe("camelCaseWords", () => {
   test("camel cases a single word (i.e. no capital letter at beginning)", () => {
     expect(camelCaseWords(["my"])).toBe("my");
   });
@@ -25,7 +25,7 @@ xdescribe("camelCaseWords", () => {
   });
 });
 
-xdescribe("getSquares", () => {
+describe("getSquares", () => {
   test("returns an empty array if empty array passed", () => {
     expect(getSquares([])).toEqual([]);
   });
@@ -40,7 +40,7 @@ xdescribe("getSquares", () => {
   });
 });
 
-xdescribe("getTotalSubjects", () => {
+describe("getTotalSubjects", () => {
   test("returns 0 if no people have subjects", () => {
     const people = [
       { name: "Billy", subjects: [] },
@@ -72,7 +72,7 @@ xdescribe("getTotalSubjects", () => {
   });
 });
 
-xdescribe("checkIngredients", () => {
+describe("checkIngredients", () => {
   test("returns false if no menu items include the specified ingredient", () => {
     const menu = [
       {

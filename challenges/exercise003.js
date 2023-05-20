@@ -15,8 +15,13 @@ export function camelCaseWords(words) {
 
 export function getTotalSubjects(people) {
   if (people === undefined) throw new Error("people is required");
-  const subjArray = Object.keys(people[1].subjects[0]);
-  return subjArray.length;
+  const subjectArray = [];
+  for (let i = 0; i < people.length; i++) {
+    subjectArray.push(...people[i].subjects);
+  }
+  return subjectArray.filter(function (n) {
+    return n;
+  }).length;
 }
 
 export function checkIngredients(menu, ingredient) {
