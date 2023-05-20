@@ -24,7 +24,6 @@ export function getCities(users) {
   if (!users) throw new Error("users is required");
   const cityHolding = [];
   for (let i = 0; i < users.length; i++) {
-    const item = users[i];
     const cityCode = users[i].data.city.displayName;
     cityHolding.push(cityCode);
   }
