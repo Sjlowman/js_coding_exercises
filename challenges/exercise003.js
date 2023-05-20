@@ -27,7 +27,12 @@ export function getTotalSubjects(people) {
 export function checkIngredients(menu, ingredient) {
   if (menu === undefined) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
-  return menu.filter((w) => w.toLowerCase().includes(ingredient.toLowerCase()));
+  let allIngredients = [];
+  for (let i = 0; i < menu.length; i++) {
+    allIngredients.push(menu[i].ingredients);
+  }
+  //return allIngredients.indexOf(ingredient) !== -1;
+  return allIngredients.includes(ingredient);
 }
 
 export function duplicateNumbers(arr1, arr2) {
