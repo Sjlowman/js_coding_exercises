@@ -32,7 +32,9 @@ export function checkIngredients(menu, ingredient) {
     allIngredients.push(menu[i].ingredients);
   }
   //return allIngredients.indexOf(ingredient) !== -1;
-  return allIngredients.includes(ingredient);
+  let stringIngredients = allIngredients.toString();
+  let compareArray = stringIngredients.split(",");
+  return compareArray.includes(ingredient);
 }
 
 export function duplicateNumbers(arr1, arr2) {
