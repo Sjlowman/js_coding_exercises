@@ -10,14 +10,12 @@ export const count1sand0s = (str) => {
   if (str === undefined) throw new Error("str is required");
   const arrayToCheck = str.split("");
   const numberArrayToCheck = arrayToCheck.map((item) => Number(item));
-  const groupedDigits = numberArrayToCheck.reduce((allDigits, currDigit) => {
-    const currCount = allDigits[currDigit] ?? 0;
-    return {
-      ...allDigits,
-      [currDigit]: currCount + 1,
-    };
-  }, {});
-  return groupedDigits;
+  const frequencies = { 1: 0, 0: 0 };
+  for (let i = 0; i < arrayToCheck.length; i++) {
+    const number = arrayToCheck[i];
+    frequencies[number] += 1;
+  }
+  return frequencies;
 };
 
 export const reverseNumber = (n) => {
