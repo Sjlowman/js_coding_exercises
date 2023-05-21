@@ -8,12 +8,22 @@ export const findNextNumber = (nums, n) => {
 
 export const count1sand0s = (str) => {
   if (str === undefined) throw new Error("str is required");
-  // Your code here!
+  const arrayToCheck = str.split("");
+  const numberArrayToCheck = arrayToCheck.map((item) => Number(item));
+  const groupedDigits = numberArrayToCheck.reduce((allDigits, currDigit) => {
+    const currCount = allDigits[currDigit] ?? 0;
+    return {
+      ...allDigits,
+      [currDigit]: currCount + 1,
+    };
+  }, {});
+  return groupedDigits;
 };
 
 export const reverseNumber = (n) => {
   if (n === undefined) throw new Error("n is required");
-  // Your code here!
+  const numAsText = n.toString();
+  return Number(numAsText.split("").reverse().join(""));
 };
 
 export const sumArrays = (arrs) => {

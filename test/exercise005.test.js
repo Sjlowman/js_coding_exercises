@@ -8,7 +8,7 @@ import {
   getWordFrequencies,
 } from "../challenges/exercise005";
 
-describe("findNextNumber", () => {
+xdescribe("findNextNumber", () => {
   test("returns the next number after the given number in the array", () => {
     expect(findNextNumber([5, 3, 7, 8, 1, 10], 7)).toBe(8);
     expect(findNextNumber([5, 3, 7, 8, 1, 10], 1)).toBe(10);
@@ -52,7 +52,7 @@ xdescribe("count1sand0s", () => {
   });
 });
 
-xdescribe("reverseNumber", () => {
+describe("reverseNumber", () => {
   test("reverses the digits of a number", () => {
     expect(reverseNumber(5)).toBe(5);
     expect(reverseNumber(104)).toBe(401);
