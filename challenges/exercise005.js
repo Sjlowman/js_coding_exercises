@@ -39,7 +39,11 @@ export const sumArrays = (arrs) => {
 
 export const arrShift = (arr) => {
   if (arr === undefined) throw new Error("arr is required");
-  // Your code here!
+  if (arr.length <= 1) return arr;
+  const firstNum = arr.slice(0, 1);
+  const lastNum = arr.slice(-1);
+  const middleNums = arr.slice(1, -1);
+  return lastNum.concat(middleNums, firstNum);
 };
 
 export const findNeedle = (haystack, searchTerm) => {
