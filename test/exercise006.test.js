@@ -7,7 +7,7 @@ import {
   areWeCovered,
 } from "../challenges/exercise006";
 
-describe("sumMultiples", () => {
+xdescribe("sumMultiples", () => {
   test("sums all numbers in the given array that are multiples of 3 or 5", () => {
     expect(sumMultiples([5, 3, 7, 8, 1, 10])).toBe(18);
     expect(sumMultiples([4, 22, 654, 123, 65, 23, 40, 1])).toBe(882);
@@ -35,27 +35,18 @@ describe("sumMultiples", () => {
   });
 });
 
-xdescribe("isValidDNA", () => {
-  test("returns an object with the count of 1s and 0s in a string", () => {
-    expect(isValidDNA("11000")).toEqual({
-      1: 2,
-      0: 3,
-    });
+describe("isValidDNA", () => {
+  test("passes if the string only contains permitted characters", () => {
+    expect(isValidDNA("AGTCCT")).toBe(true);
+  });
 
-    expect(isValidDNA("0101010111")).toEqual({
-      1: 6,
-      0: 4,
-    });
-
-    expect(isValidDNA("1111111")).toEqual({
-      1: 7,
-      0: 0,
-    });
-
-    expect(isValidDNA("0111")).toEqual({
-      1: 3,
-      0: 1,
-    });
+  test("fails if the string contains a non permitted character", () => {
+    expect(isValidDNA("AGTZ")).toBe(false);
+    expect(isValidDNA("AGT ")).toBe(false);
+    expect(isValidDNA("AGT$")).toBe(false);
+  });
+  test("fails if the string contains the right letters but lower case", () => {
+    expect(isValidDNA("cGTA")).toBe(false);
   });
 });
 
