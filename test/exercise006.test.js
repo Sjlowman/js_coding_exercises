@@ -35,7 +35,7 @@ xdescribe("sumMultiples", () => {
   });
 });
 
-describe("isValidDNA", () => {
+xdescribe("isValidDNA", () => {
   test("passes if the string only contains permitted characters", () => {
     expect(isValidDNA("AGTCCT")).toBe(true);
   });
@@ -50,12 +50,14 @@ describe("isValidDNA", () => {
   });
 });
 
-xdescribe("getComplementaryDNA", () => {
-  test("Needs to change to be like the one above", () => {
-    expect(getComplementaryDNA(5)).toBe(5);
-    expect(getComplementaryDNA(104)).toBe(401);
-    expect(getComplementaryDNA(12345)).toBe(54321);
-    expect(getComplementaryDNA(100)).toBe(1); // No leading 0 necessary
+describe("getComplementaryDNA", () => {
+  test("Assumes passed validation first. Simplest case", () => {
+    expect(getComplementaryDNA("TCAG")).toBe("AGTC");
+  });
+
+  test("Test the function can handle multiple instances including doubles", () => {
+    expect(getComplementaryDNA("AGTC")).toBe("TCAG");
+    expect(getComplementaryDNA("AAACC")).toBe("TTTGG");
   });
 });
 

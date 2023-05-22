@@ -52,6 +52,15 @@ export const isValidDNA = (str) => {
  */
 export const getComplementaryDNA = (str) => {
   if (str === undefined) throw new Error("str is required");
+  function allReplace(str, obj) {
+    for (const x in obj) {
+      str = str.replace(new RegExp(x, "g"), obj[x]);
+    }
+    return str;
+  }
+
+  const tempStr = allReplace(str, { T: "1", C: "2", A: "3", G: "4" });
+  return allReplace(tempStr, { 1: "A", 2: "G", 3: "T", 4: "C" });
 };
 
 /**
