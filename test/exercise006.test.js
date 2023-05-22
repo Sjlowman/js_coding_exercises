@@ -50,7 +50,7 @@ xdescribe("isValidDNA", () => {
   });
 });
 
-describe("getComplementaryDNA", () => {
+xdescribe("getComplementaryDNA", () => {
   test("Assumes passed validation first. Simplest case", () => {
     expect(getComplementaryDNA("TCAG")).toBe("AGTC");
   });
@@ -61,10 +61,14 @@ describe("getComplementaryDNA", () => {
   });
 });
 
-xdescribe("isItPrime", () => {
-  test("returns the total of the numbers in all sub arrays", () => {
-    const arrs = [[1, 2, 3], [6, 3, 1], [1], [9, 10], [3, 5]];
-    expect(isItPrime(arrs)).toBe(44);
+describe("isItPrime", () => {
+  test("return true if number prime, false if not prime", () => {
+    expect(isItPrime(1)).toBe(false);
+    expect(isItPrime(-6)).toBe(false);
+    expect(isItPrime(2)).toBe(true);
+    expect(isItPrime(4)).toBe(false);
+    expect(isItPrime(1543)).toBe(true);
+    expect(isItPrime(1542)).toBe(false);
   });
 });
 
